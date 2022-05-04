@@ -1,25 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import Counter from './Counter';
+import User from './User';
 
 function App() {
+
+  const data = {
+    userDetails: [
+      { name: 'John', age: 24, id: 1234 },
+      { name: 'Mary', age: 29, id: 1289 },
+      { name: 'Joel', age: 27, id: 1567 }
+    ]
+  }
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Counter />
+      <User data={data} />
     </div>
   );
 }
 
 export default App;
+
